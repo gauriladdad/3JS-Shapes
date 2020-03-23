@@ -1,8 +1,8 @@
 module.exports = {
-    entry: __dirname+'/app/app.tsx',
+    entry: __dirname+'/src/app.tsx',
     output: {
-      path: __dirname+'/app',
-      filename: 'app.bundle.js'
+      path: __dirname+'/js',
+      filename: 'app.js'
     },
     module: {
       rules: [

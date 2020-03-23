@@ -10,7 +10,8 @@
       "strict": true,             // Strict types, eg. prohibits `var x=0; x=null`
       "alwaysStrict": true,       // Enable JavaScript's "use strict" mode
       "esModuleInterop": true,     // CommonJS import behavior similar to Babel/mjs
-      "lib": ["ES6", "DOM"]
+      "lib": ["ES6", "DOM"],
+      "outDir": "./js"
     },
     "include": ["**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]

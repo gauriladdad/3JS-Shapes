@@ -81,22 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.tsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.tsx");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./app/app.tsx":
-/*!*********************!*\
-  !*** ./app/app.tsx ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar ReactDOM = __importStar(__webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\"));\nvar App = /** @class */ (function (_super) {\n    __extends(App, _super);\n    function App() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this.state = { count: 0 };\n        return _this;\n    }\n    App.prototype.render = function () {\n        var _this = this;\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h2\", null, this.props.greeting),\n            React.createElement(\"button\", { onClick: function () { return _this.setState({ count: _this.state.count + 1 }); } },\n                \"This button has been clicked \",\n                this.state.count,\n                \" times.\")));\n    };\n    return App;\n}(React.Component));\nReactDOM.render(React.createElement(App, { greeting: \"Hello, world!\" }), document.getElementById('app'));\n\n\n//# sourceURL=webpack:///./app/app.tsx?");
-
-/***/ }),
 
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
@@ -227,6 +215,18 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 "use strict";
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ \"./node_modules/scheduler/cjs/scheduler-tracing.development.js\");\n}\n\n\n//# sourceURL=webpack:///./node_modules/scheduler/tracing.js?");
+
+/***/ }),
+
+/***/ "./src/app.tsx":
+/*!*********************!*\
+  !*** ./src/app.tsx ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar ReactDOM = __importStar(__webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\"));\nvar App = /** @class */ (function (_super) {\n    __extends(App, _super);\n    function App() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this.state = { count: 0 };\n        return _this;\n    }\n    App.prototype.render = function () {\n        var _this = this;\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h2\", null, this.props.greeting),\n            React.createElement(\"button\", { onClick: function () { return _this.setState({ count: _this.state.count + 1 }); } },\n                \"This button has been clicked \",\n                this.state.count,\n                \" times.\")));\n    };\n    return App;\n}(React.Component));\nReactDOM.render(React.createElement(App, { greeting: \"Hello, world!\" }), document.getElementById('app'));\n\n\n//# sourceURL=webpack:///./src/app.tsx?");
 
 /***/ })
 

@@ -1,6 +1,11 @@
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
+var path = require('path');
 
-app.use('/node_modules', express.static('node_modules'));
-app.use('/', express.static('app'));
-app.listen(1234, () => console.log('Express server running at http://127.0.0.1:1234'));
+app.use('/js', express.static('js'))
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
+app.listen(1234);
