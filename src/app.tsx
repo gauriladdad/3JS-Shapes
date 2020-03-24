@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, RefObject } from "react";
 import ReactDOM from "react-dom";
 import {Scene, PerspectiveCamera, WebGLRenderer, Mesh, Color, BoxGeometry, MeshBasicMaterial} from "three";
 
@@ -10,10 +10,13 @@ interface AppState {
 }
 
 class App extends Component<any, AppState> {
+  private ref: RefObject<any>;
 
   constructor(props: any) {
     super(props);
-    
+
+    this.ref = React.createRef();
+
     // 1. create the scene
     const scene = new Scene();
     scene.background = new Color(0xababab);
@@ -41,8 +44,8 @@ class App extends Component<any, AppState> {
 
     scene.add( cube );
     
-    // 5. create the renderer   
-    document.body.appendChild( renderer.domElement );
+    // 5. create the renderer and mount at React
+    this.ref.current.appendChild(renderer.domElement);
 
     this.animate();
   }
@@ -58,9 +61,10 @@ class App extends Component<any, AppState> {
 
   render() {
     return (
-      <div />
-    )
+      <div ref={this.ref} />
+    );
   }
+
 }
 ReactDOM.render(
   <App />,
