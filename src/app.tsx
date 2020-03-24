@@ -1,6 +1,6 @@
 import React, { Component, RefObject } from "react";
 import ReactDOM from "react-dom";
-import {Scene, PerspectiveCamera, WebGLRenderer, Mesh, Color, BoxGeometry, MeshBasicMaterial} from "three";
+import {Scene, PerspectiveCamera, WebGLRenderer, Mesh, Color, BoxGeometry, MeshBasicMaterial, AxesHelper} from "three";
 
 interface AppState {
   cube: Mesh;
@@ -43,6 +43,9 @@ class App extends Component<any, AppState> {
     const { cube, scene, renderer } = this.state;
 
     scene.add( cube );
+
+    //const axes = new AxesHelper(5);
+    //scene.add(axes);
     
     // 5. create the renderer and mount at React
     this.ref.current.appendChild(renderer.domElement);
@@ -54,8 +57,8 @@ class App extends Component<any, AppState> {
     const { cube, renderer, scene, camera } = this.state;
     // requestAnimationFrame is a callback function from browser called each time browser refreshes automatically
     requestAnimationFrame( this.animate );
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+   // cube.rotation.x += 0.01;
+    cube.rotation.y += 0.1;
     renderer.render( scene, camera );
 	};
 
